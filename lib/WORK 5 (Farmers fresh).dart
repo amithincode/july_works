@@ -25,9 +25,8 @@ class _FarmersfreshState extends State<Farmersfresh> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(
-        slivers: [
-        SliverAppBar(
+        body: CustomScrollView(slivers: [
+      SliverAppBar(
         expandedHeight: 125,
         title: Text(
           "FARMERS FRESH ZONE",
@@ -65,106 +64,101 @@ class _FarmersfreshState extends State<Farmersfresh> {
       ),
       SliverList(
           delegate: SliverChildListDelegate([
-          SizedBox(
+        SizedBox(
           height: 50,
-          child: Row(
+        ),
+        Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-          Container(
-          decoration: BoxDecoration(
-          borderRadius:
-          const BorderRadius.all(Radius.circular(20)),
-      border: Border.all(color: Colors.green),
-           ),
-             height: 20,
-    width: 120,
-    child: const Center(
-    child: Text(
-    "VEGETABLES",
-    style: TextStyle(fontSize: 12, color: Colors.green),
-    ))),
-    Container(
-    decoration: BoxDecoration(
-    borderRadius:
-    const BorderRadius.all(Radius.circular(100)),
-    border: Border.all(color: Colors.green),
-    ),
-    height: 20,
-    width: 120,
-    child: const Center(
-    child: Text(
-    "FRUITS",
-    style: TextStyle(fontSize: 12, color: Colors.green),
-    ))),
-
-
-    SliverToBoxAdapter(
-    child: Padding(
-    padding: const EdgeInsets.all(10),
-    child: CarouselSlider(
-    items: [
-    Container(
-    child: Image.asset(
-    "assets/iconss/istockphoto-1163361097-612x612.jpg"),
-    ),
-    Container(
-    child: Image.asset(
-    "assets/iconss/istockphoto-1177383901-612x612.jpg"),
-    ),
-    Container(
-    child: Image.asset("assets/iconss/img_9.png"),
-    ),
-    Container(
-    child: Image.asset("assets/iconss/img_10.png"),
-    )
-    ],
-    options: CarouselOptions(
-    autoPlay: true, // Disable auto-play for non-looping carousel
-    enlargeCenterPage: true,
-    aspectRatio: 1.9,
-    viewportFraction: 0.8,
-    ),
-    ),
-    ),
-    ),
-
-    ],
-
-    ),
-    bottomNavigationBar: BottomNavigationBar(
-    currentIndex: index,
-    type: BottomNavigationBarType.shifting,
-    selectedItemColor: Colors.black,
-    onTap: (Tapindex) {
-    setState(() {
-    index = Tapindex;
-    });
-    },
-    items: [
-    BottomNavigationBarItem(
-    icon: Icon(
-    Icons.home,
-    color: Colors.green,
-    ),
-    label: "home",
-    ),
-    BottomNavigationBarItem(
-    icon: Icon(
-    Icons.add_box_rounded,
-    color: Colors.green,
-    ),
-    label: "Card",
-    ),
-    BottomNavigationBarItem(
-    icon: Icon(
-    Icons.account_circle_rounded,
-    color: Colors.green,
-    ),
-    label: "Account",
-    )
-    ]
-    )
-    ,
-    );
+            Container(
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.all(Radius.circular(20)),
+                  border: Border.all(color: Colors.green),
+                ),
+                height: 20,
+                width: 120,
+                child: const Center(
+                    child: Text(
+                  "VEGETABLES",
+                  style: TextStyle(fontSize: 12, color: Colors.green),
+                ))),
+            Container(
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.all(Radius.circular(100)),
+                  border: Border.all(color: Colors.green),
+                ),
+                height: 20,
+                width: 120,
+                child: const Center(
+                    child: Text(
+                  "FRUITS",
+                  style: TextStyle(fontSize: 12, color: Colors.green),
+                ))),
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: CarouselSlider(
+                  items: [
+                    Container(
+                      child: Image.asset(
+                          "assets/iconss/istockphoto-1163361097-612x612.jpg"),
+                    ),
+                    Container(
+                      child: Image.asset(
+                          "assets/iconss/istockphoto-1177383901-612x612.jpg"),
+                    ),
+                    Container(
+                      child: Image.asset("assets/iconss/img_9.png"),
+                    ),
+                    Container(
+                      child: Image.asset("assets/iconss/img_10.png"),
+                    )
+                  ],
+                  options: CarouselOptions(
+                    autoPlay: true,
+                    // Disable auto-play for non-looping carousel
+                    enlargeCenterPage: true,
+                    aspectRatio: 1.9,
+                    viewportFraction: 0.8,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+        BottomNavigationBar(
+            currentIndex: index,
+            type: BottomNavigationBarType.shifting,
+            selectedItemColor: Colors.black,
+            onTap: (Tapindex) {
+              setState(() {
+                index = Tapindex;
+              });
+            },
+            items: [
+              BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.home,
+                  color: Colors.green,
+                ),
+                label: "home",
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.add_box_rounded,
+                  color: Colors.green,
+                ),
+                label: "Card",
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.account_circle_rounded,
+                  color: Colors.green,
+                ),
+                label: "Account",
+              )
+            ]),
+      ]))
+    ]));
   }
 }
