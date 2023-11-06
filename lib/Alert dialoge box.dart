@@ -1,5 +1,3 @@
-import 'package:carousel_slider/carousel_options.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -9,43 +7,44 @@ void main() {
     return MaterialApp(
       useInheritedMediaQuery: true,
       debugShowCheckedModeBanner: false,
-      home: Dialogebox(),
+      home: Backpress(),
     );
   }));
 }
 
-class Dialogebox extends StatelessWidget{
+class Backpress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Alert BOX"),
-        centerTitle: true,
-      ),
-      body:
-      Center(
-        child: ElevatedButton(onPressed: (){
-          showDialog(context: context, builder: (context){
-            return AlertDialog(
-              title: Text("Are you sure to EXIT"),
-              content:Text( "sure...."),
-              actions: [
-                TextButton(onPressed: (){
-                  Navigator.of(context).pop();
-                }, child: Text("cancel")),
-                TextButton(onPressed: (){
-                  Navigator.of(context).pop();
-                }, child: Text("back")),
-                TextButton(onPressed: (){
-                  Navigator.of(context).pop();
-                }, child: Text("exit"))
-              ],
-            );
-          });
-        }, child: Text("Exit")),
-      ),
+    Future<bool> showExitPopup() async {
+      return await showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: Text("Exit?"),
+            content: Text("Do you want to Exit"),
+            actions: [
+              TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Text("Yes")),
+              TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Text("No")),
+            ],
+          ));
+    }
 
-    );
+    return WillPopScope(
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text("BackPress"),
+          ),
+          body: const Center(
+            child: Text("Suiiiii"),
+          ),
+        ),
+        onWillPop: showExitPopup);
   }
 }
-

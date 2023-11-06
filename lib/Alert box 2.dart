@@ -1,11 +1,24 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
 
-void main() => runApp(MaterialApp(home: HomePage(),));
 
+
+void main() {
+  runApp(DevicePreview(builder: (context) {
+    return MaterialApp(
+      useInheritedMediaQuery: true,
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
+    );
+  }));
+}
 
 class HomePage extends StatefulWidget {
+  const HomePage({
+    Key? key,
+  }) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -16,7 +29,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Awesome Dialog Example'),
+        title: const Text('Awesome Dialog Example'),centerTitle: true,
+        backgroundColor: Colors.orange,
       ),
       body: Center(
         child: Container(
@@ -391,3 +405,5 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+//DEPENDENCYES OF DIAL0GE BOX
