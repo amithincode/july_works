@@ -17,67 +17,71 @@ class staggered extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: StaggeredGrid.count(crossAxisCount: 4, children: [
+      appBar: AppBar(title: Text("Staggered grid view"),
+      centerTitle: true,),
+        body: SafeArea(
+          child: StaggeredGrid.count(crossAxisCount: 4, children: [
       StaggeredGridTile.count(
-          crossAxisCellCount: 4,
-          mainAxisCellCount: 3.5,
-          child: Card(
-            color: Colors.black,
-            child: Image(
-              image: AssetImage("assets/iconss/img.png"),
-              fit: BoxFit.cover,
-            ),
-          )),
+            crossAxisCellCount: 4,
+            mainAxisCellCount: 3.5,
+            child: Card(
+              color: Colors.black,
+              child: Image(
+                image: AssetImage("assets/iconss/img.png"),
+                fit: BoxFit.cover,
+              ),
+            )),
       StaggeredGridTile.count(
-          crossAxisCellCount: 2,
-          mainAxisCellCount: 2,
-          child: Card(
-            color: Colors.green,
-            child: Image(
-              image: AssetImage("assets/iconss/img.png"),
-              fit: BoxFit.cover,
-            ),
-          )),
+            crossAxisCellCount: 2,
+            mainAxisCellCount: 2,
+            child: Card(
+              color: Colors.green,
+              child: Image(
+                image: AssetImage("assets/iconss/img.png"),
+                fit: BoxFit.cover,
+              ),
+            )),
       StaggeredGridTile.count(
-          crossAxisCellCount: 2,
-          mainAxisCellCount: 1,
-          child: Card(
-            color: Colors.green,
-            child: Image(
-              image: AssetImage("assets/iconss/img.png"),
-              fit: BoxFit.cover,
-            ),
-          )),
+            crossAxisCellCount: 2,
+            mainAxisCellCount: 1,
+            child: Card(
+              color: Colors.green,
+              child: Image(
+                image: AssetImage("assets/iconss/img.png"),
+                fit: BoxFit.cover,
+              ),
+            )),
       StaggeredGridTile.count(
-          crossAxisCellCount: 1,
-          mainAxisCellCount: 1,
-          child: Card(
-            color: Colors.green,
-            child: Image(
-              image: AssetImage("assets/iconss/img.png"),
-              fit: BoxFit.cover,
-            ),
-          )),
+            crossAxisCellCount: 1,
+            mainAxisCellCount: 1,
+            child: Card(
+              color: Colors.green,
+              child: Image(
+                image: AssetImage("assets/iconss/img.png"),
+                fit: BoxFit.cover,
+              ),
+            )),
       StaggeredGridTile.count(
-          crossAxisCellCount: 1,
-          mainAxisCellCount: 1,
-          child: Card(
-            color: Colors.green,
-            child: Image(
-              image: AssetImage("assets/iconss/img.png"),
-              fit: BoxFit.cover,
-            ),
-          )),
+            crossAxisCellCount: 1,
+            mainAxisCellCount: 1,
+            child: Card(
+              color: Colors.green,
+              child: Image(
+                image: AssetImage("assets/iconss/img.png"),
+                fit: BoxFit.cover,
+              ),
+            )),
       StaggeredGridTile.count(
-          crossAxisCellCount: 5,
-          mainAxisCellCount: 3,
-          child: Card(
-            color: Colors.green,
-            child: Image(
-              image: AssetImage("assets/iconss/img.png"),
-              fit: BoxFit.cover,
-            ),
-          )),
-    ]));
+            crossAxisCellCount: 5,
+            mainAxisCellCount: 3,
+            child: Card(
+              color: Colors.green,
+              child: Image(
+                image: AssetImage("assets/iconss/img.png"),
+                fit: BoxFit.cover,
+              ),
+            )),
+    ]),
+        ));
   }
 }

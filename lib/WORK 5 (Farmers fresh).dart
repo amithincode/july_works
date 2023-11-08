@@ -28,6 +28,7 @@ class _worksliderState extends State<workslider> {
     return Scaffold(
       body: CustomScrollView(slivers: [
         SliverAppBar(
+
           actions: [
             Padding(
               padding: const EdgeInsets.only(right: 10),
@@ -127,6 +128,7 @@ class _worksliderState extends State<workslider> {
                   Image.asset(
                       "assets/iconss/istockphoto-1177383901-612x612.jpg"),
                 ]),
+            SizedBox(height:8),
             SizedBox(
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
@@ -167,13 +169,13 @@ class _worksliderState extends State<workslider> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 10, top: 10),
+              padding: const EdgeInsets.only(left: 10, top: 50),
               child: Text(
                 "Shop by Category",
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
-                    fontSize: 20),
+                    fontSize: 25),
               ),
             ),
             SizedBox(
@@ -181,22 +183,34 @@ class _worksliderState extends State<workslider> {
             ),
             Container(
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(1),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Image.asset(
-                      "assets/iconss/img_10.png",
-                      height: 60,
+                    ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                      child:  Image.asset(
+                          "assets/iconss/img_13.png",
+                          height: 70,
+                          )
+
                     ),
-                    Image.asset(
-                      "assets/iconss/img_10.png",
-                      height: 50,
+                    ClipRRect(
+                        borderRadius: BorderRadius.circular(15),
+                        child:  Image.asset(
+                          "assets/iconss/img_12.png",
+                          height: 70,width:120,fit: BoxFit.cover,
+                        )
+
                     ),
-                    Image.asset(
-                      "assets/iconss/img_10.png",
-                      height: 50,
-                    )
+                    ClipRRect(
+                        borderRadius: BorderRadius.circular(15),
+                        child:  Image.asset(
+                          "assets/iconss/img_13.png",
+                          height: 70,
+                        )
+
+                    ),
                   ],
                 ),
               ),

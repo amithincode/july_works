@@ -15,7 +15,7 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("listview"),
+        title: Text("Listview"),centerTitle: true,
       ),
       body: Container(
         color: Colors.yellow[50],
@@ -26,9 +26,9 @@ class Homepage extends StatelessWidget {
               shadowColor: Colors.blue,
               child: ListTile(
                 leading: CircleAvatar(
-                  backgroundImage: AssetImage("assets/Iconss/download.jpeg"),
+                  backgroundImage: AssetImage("assets/iconss/devil.png"),
                 ),
-                title: Text("arya"),
+                title: Text("AMITH"),
                 subtitle: Text("flutter"),
                 trailing: Icon(Icons.call),
               ),
@@ -37,26 +37,26 @@ class Homepage extends StatelessWidget {
               color: Colors.yellow,
               child: ListTile(
                 leading: CircleAvatar(
-                  backgroundImage: AssetImage("assets/Iconss/person.jpg"),
+                  backgroundImage: AssetImage("assets/iconss/devil.png"),
                 ),
-                title: Text("arya"),
+                title: Text("AMITH"),
                 subtitle: Text("flutter"),
                 trailing: Icon(Icons.call),
               ),
             ),
             ListTile(
               leading: CircleAvatar(
-                backgroundImage: AssetImage("assets/Iconss/person.jpg"),
+                backgroundImage: AssetImage("assets/iconss/devil.png"),
               ),
-              title: Text("arya"),
+              title: Text("AMITH"),
               subtitle: Text("flutter"),
               trailing: Icon(Icons.call),
             ),
             ListTile(
               leading: CircleAvatar(
-                backgroundImage: AssetImage("assets/Iconss/person.jpg"),
+                backgroundImage: AssetImage("assets/iconss/devil.png"),
               ),
-              title: Text("arya"),
+              title: Text("AMITH"),
               subtitle: Text("flutter"),
               trailing: Icon(Icons.call),
             ),

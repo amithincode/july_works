@@ -48,6 +48,7 @@ dependencies:
   flutter_svg: ^2.0.8
   rive:
   image_picker: ^1.0.4
+  flare_splash_screen: ^4.0.0
   video_player: ^2.8.1
   mime: ^1.0.4
   progressive_image: ^2.0.1
@@ -55,6 +56,12 @@ dependencies:
   cached_network_image: ^3.3.0
   cool_alert: ^2.0.1
   awesome_dialog: ^3.1.0
+  google_maps_flutter: ^2.5.0
+  shared_preferences: ^2.2.2
+  sqflite: ^2.3.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
 
 
 dev_dependencies:
@@ -73,6 +80,12 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  fonts:
+    - family: F1
+      fonts:
+        - asset: assets/Fonts/Lobster-Regular.ttf
+
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
